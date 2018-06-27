@@ -36,12 +36,12 @@ public class Delete extends Action {
 
     @Override
     public String toString() {
-        return getName() + " " + node.toShortString();
+        return getName() + "," + node.toShortString();
     }
 
     @Override
     public String format(TreeContext ctx) {
-        return getName() + " " + node.toPrettyString(ctx);
+        return getName() + "," + node.toPrettyString(ctx);
     }
 
 }

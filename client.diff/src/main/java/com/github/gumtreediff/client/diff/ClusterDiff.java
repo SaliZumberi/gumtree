@@ -45,12 +45,11 @@ public class ClusterDiff extends AbstractDiffClient<AbstractDiffClient.Options> 
         List<Action> actions = g.getActions();
         ActionClusterFinder f = new ActionClusterFinder(getSrcTreeContext(), getDstTreeContext(), actions);
         for (Set<Action> cluster: f.getClusters()) {
-            System.out.println("New cluster:");
-            System.out.println(f.getClusterLabel(cluster));
-            System.out.println("------------");
-            for (Action a: cluster)
-                System.out.println(a.format(getSrcTreeContext()));
-            System.out.println("");
+            String oneLineClusterOutput = "{" + f.getClusterLabel(cluster) +"}";
+            for (Action a: cluster){
+                oneLineClusterOutput += ";[" + a.format(getSrcTreeContext()) + "]";
+            }
+            System.out.println(oneLineClusterOutput);
         }
     }
 

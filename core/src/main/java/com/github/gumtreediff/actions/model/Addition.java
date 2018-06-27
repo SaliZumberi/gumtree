@@ -45,12 +45,12 @@ public abstract class Addition extends Action {
 
     @Override
     public String toString() {
-        return getName() + " " + node.toShortString() + " to " + parent.toShortString() + " at " + pos;
+        return getName() + "," + node.toShortString() + "," + parent.toShortString();
     }
 
     @Override
     public String format(TreeContext ctx) {
-        return getName() + " " + node.toPrettyString(ctx) + " to " + parent.toPrettyString(ctx) + " at " + pos;
+        return getName() + "," + node.toPrettyString(ctx) + "," + parent.toPrettyString(ctx);
     }
 
 }

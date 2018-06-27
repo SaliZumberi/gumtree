@@ -133,10 +133,10 @@ public class ActionClusterFinder {
             return root.format(src);
         } else if (first instanceof Move) {
             Move m = (Move) first;
-            return "MOVE from " + m.getParent().toPrettyString(src);
+            return "MOVE," + m.getParent().toPrettyString(src);
         } else if (first instanceof Update) {
             Update u = (Update) first;
-            return "UPDATE from " + first.getNode().getLabel() + " to " + u.getValue();
+            return "UPDATE," + first.getNode().getLabel() + "," + u.getValue();
         } else if (first instanceof Delete) {
             Delete root = null;
             for (Action a : cluster)
