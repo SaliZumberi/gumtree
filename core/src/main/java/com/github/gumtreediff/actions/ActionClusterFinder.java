@@ -136,7 +136,7 @@ public class ActionClusterFinder {
             return "MOVE," + m.getParent().toPrettyString(src);
         } else if (first instanceof Update) {
             Update u = (Update) first;
-            return "UPDATE," + first.getName() + "," + u.getValue();
+            return "UPDATE," + u.toString();
         } else if (first instanceof Delete) {
             Delete root = null;
             for (Action a : cluster)
