@@ -43,12 +43,12 @@ public class Update extends Action {
 
     @Override
     public String toString() {
-        return getName();
+        return getName() + "," + node.toString();
     }
 
     @Override
     public String format(TreeContext ctx) {
-        return getName();
+        return getName() + "," + node.toPrettyString(ctx);
     }
 
 }
