@@ -144,7 +144,7 @@ public class ActionClusterFinder {
                     root = (Delete) a;
             return root.format(src);
         } else
-            return "Unknown cluster type";
+            return "Unknown cluster-type";
     }
 
 }
