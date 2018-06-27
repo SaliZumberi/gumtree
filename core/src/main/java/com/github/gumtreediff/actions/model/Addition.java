@@ -53,4 +53,8 @@ public abstract class Addition extends Action {
         return getName() + "," + node.toPrettyString(ctx) + "," + parent.toPrettyString(ctx);
     }
 
+    public String formatCluster(TreeContext ctx) {
+        return "INSERT,"+ node.toPrettyString(ctx) + "," + parent.toPrettyString(ctx);
+    }
+
 }

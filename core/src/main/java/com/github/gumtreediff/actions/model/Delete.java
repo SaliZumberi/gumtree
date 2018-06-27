@@ -44,4 +44,8 @@ public class Delete extends Action {
         return getName() + "," + node.toPrettyString(ctx);
     }
 
+    public String formatCluster(TreeContext ctx) {
+        return "DELETE,"+ node.toPrettyString(ctx);
+    }
+
 }
